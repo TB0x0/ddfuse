@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DDFuse Chats</title>
+  </head>
+
+  <body>
+    {% if latest_messages %}
+      <ul>
+        {% for message in latest_messages %}
+        <li>{{ message.timestamp}} - {{ message.username }} - {{ message.message_content }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+      <p>No messages here! Go ahead and make one.</p>
+    {% endif %}
+  </body>
+</html>
