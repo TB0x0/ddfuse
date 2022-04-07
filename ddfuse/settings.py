@@ -28,6 +28,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'chats.apps.ChatsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -65,8 +66,17 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ddfuse.wsgi.application'
+ASGI_APPLICATION = 'ddfuse.asgi.application'
 
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            # Host and port will change based on deployment environment
+            "hosts": [('127.0.0.1', 6379)]
+        }
+    }
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
