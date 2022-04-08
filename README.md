@@ -21,3 +21,14 @@ I have put a temporary secret key in the settings file so that it could be share
 Anybody and everybody can fork the repository and make a pull request. I'll review it and apply.
 
 For places to start check out issues. If you'd like to make your own issue and solve it feel free.
+
+
+### Production Timeline
+
+- [x] Secure ddfuse domain
+- [ ] Complete chat channels
+- [ ] Complete a few blog posts
+- [ ] Decide on hosting platform (Digital Ocean? Google Cloud?)
+- [ ] Backend running
+- [ ] Front end running
+- [ ] Site live
