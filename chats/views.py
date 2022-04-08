@@ -11,4 +11,7 @@ def index(request):
 
 
 def room(request, room_name):
-    return render(request, 'chats/room.html', { 'room_name': room_name})
+    if room_name == 'general':
+        return render(request, 'chats/general.html', { 'room_name': room_name})
+    else:
+        return render(request, 'chats/404.html', { 'room_name': room_name})
