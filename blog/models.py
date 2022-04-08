@@ -1,10 +1,12 @@
 from django.db import models
 
+# Defines what status the blog post is in
 STATUS = (
     (0, "Draft"),
     (1, "Published")
 )
 
+# Defines the database model for blog posts
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
@@ -18,4 +20,4 @@ class Post(models.Model):
         ordering = ['-created_on']
 
     def __str__(self):
-        return self.title 
+        return self.title
